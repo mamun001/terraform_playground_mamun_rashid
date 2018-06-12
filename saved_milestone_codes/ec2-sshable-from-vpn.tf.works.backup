@@ -1,0 +1,55 @@
+
+# creates ec2 instances  using module -mamun
+
+
+# called ec2 module takes 6 variables
+#variable "subnet_id" 
+#variable "ami_code" 
+#variable "instance_type" 
+#variable "security_groups"  vpc_security_group_ids
+#variable "az_id" 
+#variable "key_name" 
+
+
+# JIVE WEB SERVER: need 6GB and RAID disk. 2GB heap: 2 Cores 2 Ghz  = t2.large
+module "test_user_data" {
+  source = "../../modules/ec2-module"
+  # subnet id will have to come from module called earlier to create the subnet
+  # in the following line: terraform expects (after "module"): the exact name defined in the .tf file HERE in this dir (e.g. foobar_vpc, subnet_module)
+  # NOT anything to do with vars in the module's code!
+  subnet_id = "${module.subnet_public_west_2a.created_subnet_id}"
+
+  # ami-14c5486b: first one I saw on console :-) just playing
+  # froim some random web site:  ami-4e700e36
+  #ami_code = "ami-4e700e36"
+  # ami from DMM prod code:  for bastion:  ami-5d90e325 : failed
+  # trying the one at dns.tf at DDM: failed
+  # first amazon linux on the console:  ami-e251209a
+  ami_code = "ami-e251209a"
+  instance_type = "t2.large"
+  private_ip = "1.1.1.5"   # first 3 are reserved: confirmed
+
+  # security groups: used SG's created by .tf file in this directory
+  #vpc_security_group_ids = ["${aws_security_group.ssh_only_mybigfatcompany.id}", "${aws_security_group.ping_only_mybigfatcompany.id}", "${aws_security_group.ping_only_qa_vpc.id}", "${aws_security_group.ssh_only_qavpc.id}"]
+  vpc_security_group_ids = ["${aws_security_group.ssh_only_mybigfatcompany.id}", "${aws_security_group.all_icmp_out_only.id}", "${aws_security_group.ssh_only_qavpc.id}", "${aws_security_group.sg_80_443_out.id}", "${aws_security_group.ssh_only_vpn.id}"]
+  # AZ
+  az_id = "us-west-2a"
+  # key_name: keys are generated from the key.tf in this folder
+  key_name = "${aws_key_pair.key_bastion.key_name}"
+ # public ip
+ associate_public_ip_address = "true"
+  name_tag = "delete-me"
+}
+
+
+output "test_user_data_ec2_pri_ip" {
+  value = ["${module.test_user_data.created_ec2_private_ip}"]
+}
+
+output "test_user_data_ec2_pub_ip" {
+  value = ["${module.test_user_data.created_ec2_public_ip}"]
+}
+
+#____________________________________________________________________________
+# usefull code snippets not used
+#vpc_id     = "${module.foobar_vpc.created_vpc_id}"

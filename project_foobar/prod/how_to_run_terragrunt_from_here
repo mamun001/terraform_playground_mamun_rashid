@@ -1,0 +1,6 @@
+
+terragrint get-all
+terragrunt plan-all
+terragrunt apply-all
+
+  That's it -Mamun

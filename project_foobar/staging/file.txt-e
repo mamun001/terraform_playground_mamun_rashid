@@ -1,0 +1,64 @@
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:43:56 Running command: terraform --version
+[terragrunt] 2018/05/14 16:43:56 Stack at /Users/rashm010/GITS/terraform_codes/project_foobar/staging:
+  => Module /Users/rashm010/GITS/terraform_codes/project_foobar/staging (dependencies: [])
+  => Module /Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc (dependencies: [])
+[terragrunt] 2018/05/14 16:43:56 [terragrunt]  Are you sure you want to run 'terragrunt apply' in each folder of the stack described above? (y/n) 
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Module /Users/rashm010/GITS/terraform_codes/project_foobar/staging must wait for 0 dependencies to finish
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Running module /Users/rashm010/GITS/terraform_codes/project_foobar/staging now
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc] 2018/05/14 16:44:07 Module /Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc must wait for 0 dependencies to finish
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc] 2018/05/14 16:44:07 Running module /Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc now
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc] 2018/05/14 16:44:07 Reading Terragrunt config file at /Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc/terraform.tfvars
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Reading Terragrunt config file at /Users/rashm010/GITS/terraform_codes/project_foobar/staging/terraform.tfvars
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc] 2018/05/14 16:44:07 Running command: terraform apply -input=false -auto-approve
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 WARNING: no double-slash (//) found in source URL /Users/rashm010/GITS/terraform_codes/project_foobar/staging. Relative paths in downloaded Terraform code may not work.
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Cleaning up existing *.tf files in /Users/rashm010/.terragrunt/1Bc4fObEJzaP83C4rpfmJBXFpnw/64NDHIsnx0vw_OU23niTDK0LOFg
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Downloading Terraform configurations from file:///Users/rashm010/GITS/terraform_codes/project_foobar/staging into /Users/rashm010/.terragrunt/1Bc4fObEJzaP83C4rpfmJBXFpnw/64NDHIsnx0vw_OU23niTDK0LOFg using terraform init
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Running command: terraform init -from-module=file:///Users/rashm010/GITS/terraform_codes/project_foobar/staging /Users/rashm010/.terragrunt/1Bc4fObEJzaP83C4rpfmJBXFpnw/64NDHIsnx0vw_OU23niTDK0LOFg
+[0m[1mCopying configuration[0m from "file:///Users/rashm010/GITS/terraform_codes/project_foobar/staging"...[0m
+
+[0m[1mInitializing provider plugins...[0m
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 1.18"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Copying files from /Users/rashm010/GITS/terraform_codes/project_foobar/staging into /Users/rashm010/.terragrunt/1Bc4fObEJzaP83C4rpfmJBXFpnw/64NDHIsnx0vw_OU23niTDK0LOFg
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Setting working directory to /Users/rashm010/.terragrunt/1Bc4fObEJzaP83C4rpfmJBXFpnw/64NDHIsnx0vw_OU23niTDK0LOFg
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:07 Running command: terraform apply -input=false -auto-approve
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.[0m
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging] 2018/05/14 16:44:08 Module /Users/rashm010/GITS/terraform_codes/project_foobar/staging has finished successfully!
+[0m[1mmodule.foobar_vpc.aws_vpc.foobar_vpc: Creating...[0m
+  assign_generated_ipv6_cidr_block: "" => "false"
+  cidr_block:                       "" => "10.0.0.0/16"
+  default_network_acl_id:           "" => "<computed>"
+  default_route_table_id:           "" => "<computed>"
+  default_security_group_id:        "" => "<computed>"
+  dhcp_options_id:                  "" => "<computed>"
+  enable_classiclink:               "" => "<computed>"
+  enable_classiclink_dns_support:   "" => "<computed>"
+  enable_dns_hostnames:             "" => "<computed>"
+  enable_dns_support:               "" => "true"
+  instance_tenancy:                 "" => "<computed>"
+  ipv6_association_id:              "" => "<computed>"
+  ipv6_cidr_block:                  "" => "<computed>"
+  main_route_table_id:              "" => "<computed>"[0m
+[0m[1mmodule.foobar_vpc.aws_vpc.foobar_vpc: Creation complete after 4s (ID: vpc-e9e5cb92)[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.[0m
+[terragrunt] [/Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc] 2018/05/14 16:44:14 Module /Users/rashm010/GITS/terraform_codes/project_foobar/staging/vpc has finished successfully!

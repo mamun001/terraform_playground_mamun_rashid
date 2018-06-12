@@ -1,0 +1,8 @@
+
+terragrunt plan-all
+terragrunt apply-all
+
+terragrint get-all IS NOT NEEDED
+
+
+  That's it -Mamun

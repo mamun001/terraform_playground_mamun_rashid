@@ -1,0 +1,14 @@
+
+# creates subnets using module -mamun
+
+
+# call the module to create subnets instead of  creating here
+# this subnet modulke only takes two variables: variable cidr_block and vpc_id_of_subnet
+module "subnet_module" {
+  source = "../../modules/subnet-module"
+  cidr_block = "10.0.4.0/24"
+  # vpc id comes from output of another tf file
+  vpc_id_of_subnet = "${module.foobar_vpc.created_vpc_id}"
+}
+
+#vpc_id     = "${module.foobar_vpc.created_vpc_id}"

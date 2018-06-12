@@ -1,0 +1,5 @@
+
+You do not need a main.tf file here in the module's dir.
+You just need 2 .tf files:
+   - somefile.tf  : which has the resource code
+   - variables.tf : for input variables coming INTO the module 

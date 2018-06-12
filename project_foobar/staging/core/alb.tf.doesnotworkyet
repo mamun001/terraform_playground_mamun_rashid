@@ -1,0 +1,64 @@
+# This whole file is modified version of a code from stackoverflow
+#  my code failing on S3 permissions, so that's why
+# at least this works for ELB
+# even works for ALB with simple changes
+
+# gets account info etc
+data "aws_elb_service_account" "main" {}
+
+# create bucket for ELB logs
+resource "aws_s3_bucket" "alb_logs_qa" {
+  bucket = "alb-bucket-backlot-qa"
+  acl    = "private"
+
+  # Version has to be 2012-10-17! (aws parameter)
+
+  policy = <<POLICY
+{
+  "Id": "Policy",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::alb-bucket-backlot-qa/AWSLogs/*",
+      "Principal": {
+        "AWS": [
+          "${data.aws_elb_service_account.main.arn}"
+        ]
+      }
+    }
+  ]
+}
+POLICY
+}
+
+output "alb_logs_bucket_arn" {
+  value = "${aws_s3_bucket.alb_logs_qa.arn}"
+}
+
+resource "aws_lb" "bar" {
+  name               = "alb-backlot-qa"
+  internal           = false
+  load_balancer_type = "application"
+
+  # AZ is determined by subnet sepcified below
+  #availability_zones = ["us-west-2a"]
+
+  # by giving it subnet, you indirectly specify VPC, otherwise fails bc defult vpc is gone.
+  subnets = ["${module.subnet_public_west_2a.created_subnet_id}", "${module.subnet_public_west_2b.created_subnet_id}", "${module.subnet_public_west_2c.created_subnet_id}"]
+
+  #subnets = ["${module.subnet_public_west_1a.created_subnet_id}"]
+
+  access_logs {
+    bucket = "${aws_s3_bucket.alb_logs_qa.bucket}"
+  }
+
+  security_groups = ["${aws_security_group.sg_alb_qa.id}"]
+}
+
+output "alb_dns_name" {
+  value = "${aws_lb.bar.dns_name}"
+}
