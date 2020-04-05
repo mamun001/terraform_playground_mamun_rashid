@@ -1,7 +1,15 @@
+
+
 # terraform_codes
+
 A sample of Mamun Rashid's Terraform Codes
 
-each project has its own folder like project_foobar
-under each project folder, there will, prod, staging, modules, global etc.
+Each project has its own folder:
+   e.g. create_ecs_cluster_and_service
 
-   Note: modules folder will be shared between environments.
+  Under each project folder, there will, prod, staging, modules, global etc.
+
+
+Note: modules folder will be shared between environments.
+
+

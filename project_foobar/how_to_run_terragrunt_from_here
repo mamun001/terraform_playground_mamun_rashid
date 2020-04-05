@@ -1,7 +1,0 @@
-
-You don't want to run terragrungt at project level:
-
-You want to run run terragrunt at the environment level e.g. staging:
-
-So, cd staging  (and you will find instructions there)
-  That's it -Mamun
