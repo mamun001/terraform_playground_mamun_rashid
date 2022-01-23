@@ -1,0 +1,14 @@
+{
+  "inputs": [
+        {
+          "acct_id": "sa-mamun-terraform-14",
+          "display_name": "mamun rashid",
+          "project-role-pairs": ["test-7-481ef3d2", "roles/logging.logWriter"]
+        },
+        {
+          "acct_id": "sa-mamun-terraform-15",
+          "display_name": "john doe",
+          "project-role-pairs": ["test-7-481ef3d2", "roles/logging.logWriter"]
+        }
+      ]
+}
