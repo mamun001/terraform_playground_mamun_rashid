@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sre-sandbox-999",
+  "private_key_id": "2c50e61aed4ae009e68379a9e2224354c19839e9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\DONTWORRY-THIS-IS-FAKE-nMII2rCf2Jhz266YYw/k\na0flKoZJH0U61e/EYxxX6R9GLvNyuuGm1ZjfQO0SGZrXPTUZic6g/Y0K8M9ApUJT\nw/dQn7X5qf1tEIJLTb+cUGJj\n-----END PRIVATE KEY-----\n",
+  "client_email": "sa--terraform@sre-sandbox-9999.iam.gserviceaccount.com",
+  "client_id": "106359408244740855603",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sa-mamun-terraform%40sre-sandbox-9999.iam.gserviceaccount.com"
+}
