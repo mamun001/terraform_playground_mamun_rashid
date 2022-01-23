@@ -1,0 +1,13 @@
+
+All tested and works beautifully
+
+Steps:
+  1. VPC
+  2. Subnet
+  3. k8s cluster
+  4. public IP
+  5. k8s app service and deployment
+
+Once deployed , you go to http://public_ip_of_loadbalancer:90 and boom ! You see the page
+
+
