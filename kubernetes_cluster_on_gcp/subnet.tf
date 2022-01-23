@@ -1,9 +1,9 @@
 
 resource "google_compute_subnetwork" "gke_subnet" {
-  name                     = "gke-subnet"
-  project                  = "youtubedemo-332106" 
-  ip_cidr_range            = "10.10.0.0/20"
+  name                     = local.subnet_name
+  project                  = local.project
+  ip_cidr_range            = local.ip_cidr_range
   network                  = google_compute_network.gke_vpc.self_link
-  region                   = "us-central1"
+  region                   = local.region
   private_ip_google_access = true
 }
