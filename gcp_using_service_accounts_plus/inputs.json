@@ -1,0 +1,14 @@
+{
+  "inputs": [
+        {
+          "acct_id": "sa-mamun-terraform-19",
+          "display_name": "john doe",
+          "project-role-pairs": {"test-7-481ef3d2": "roles/logging.logWriter", "test-7-481ef3d2": "roles/storage.objectViewer"}
+        },
+        {
+          "acct_id": "sa-ms-united3-dms3",
+          "display_name": "sa-ms-united3-dms3",
+          "project-role-pairs": {"test-7-481ef3d2": "roles/logging.logWriter", "sre-sandbox-243618": "roles/storage.objectViewer"}
+        }
+      ]
+}
