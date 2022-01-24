@@ -4,10 +4,11 @@
 # only one port
 # only one CIDR block ingress
 
-# 3 vars are defined in the tfvars file in this folder
+# 4 vars are defined in the tfvars file in this folder
 #variable "allowed_ingress_port" 
 #variable "allowed_ingress_cidr" 
 #variable "vpc_id" 
+#variable "protocol"
 
 resource "aws_security_group" "allow_one_port" {
   name        = "allow_one_port"
@@ -18,7 +19,8 @@ resource "aws_security_group" "allow_one_port" {
     from_port   = "${var.allowed_ingress_port}"
     to_port   = "${var.allowed_ingress_port}"
     # any protocol
-    protocol    = "-1"
+    protocol    = "${var.protocol}"
+    # cidr_blocks is a list, nit string
     cidr_blocks = "${var.allowed_ingress_cidr}"
     #cidr_blocks = ["0.0.0.0/0"]
   }
@@ -32,6 +34,11 @@ resource "aws_security_group" "allow_one_port" {
   }
 }
 
+# THIS WORKS! sending value OUT of the module
+# caller code should now be able to grab the security group id from "allow_one_port"
+output "created_security_group_id" {
+  value = "${aws_security_group.allow_one_port.id}"
+}
 
 # ______________________________________________________________________________
 # other code snippets that are useful, but not actively used here 
@@ -42,11 +49,6 @@ resource "aws_security_group" "allow_one_port" {
   ##cidr_block = "10.0.1.0/24"
 #}
 
-# THIS WORKS! sending value OUT of the module
-# caller code should now be able to grab the value using created_vpc_id variable
-#output "created_vpc_id" {
-  #value = "${aws_vpc.foobar_vpc.id}"
-#}
 
 
 

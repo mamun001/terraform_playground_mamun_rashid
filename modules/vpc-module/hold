@@ -5,7 +5,7 @@ resource "aws_vpc" "foobar_vpc" {
   #cidr_block = "10.0.0.0/16"
   cidr_block = "${var.cidr}"   # cidr is defined in the variables.tf file in this module folder"
   tags {
-    Name = "${var.name_tag}"
+    Name = "backlot"
   }
 }
 

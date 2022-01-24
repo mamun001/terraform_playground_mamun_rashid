@@ -1,21 +1,12 @@
 
 # creates a subnet  -mamun
 
-# 4 vars are defined in the tfvars file in this folder
-# vpc_id
-# cidr_block
-# az_id
-# name_tag
-
-
+# 2 vars are defined in the tfvars file in this folder
 resource "aws_subnet" "created_subnet" {
   vpc_id     = "${var.vpc_id_of_subnet}"
   cidr_block = "${var.cidr_block}"
   #cidr_block = "10.0.1.0/24"
   availability_zone = "${var.az_id}"
-  tags {
-    Name = "${var.name_tag}"
-  }
 }
 
 # THIS WORKS! sending value OUT of the module

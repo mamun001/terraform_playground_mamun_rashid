@@ -1,4 +1,11 @@
 
+# variables
+#  allowed_ingress_port
+#  allowed_ingress_cidr
+#  protocol
+#  vpc_id
+
+
 variable "allowed_ingress_port" {
   description = "allowed port inbound"  
 }
@@ -9,10 +16,19 @@ variable "allowed_ingress_cidr" {
   default = ["10.0.0.0/24", "10.0.0.0/24"]
 }
 
+variable "protocol" {
+  description = "protcol"  
+  default = "tcp"
+}
 
 variable "vpc_id" {
   description = "VPC in scope for this SG"  
 }
+
+#variable "name_tag" {
+  #description = "Tag value for key Name"
+#}
+
 
 # useful code snippet unused here
 #variable "zones" {
