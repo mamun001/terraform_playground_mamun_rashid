@@ -1,0 +1,28 @@
+
+#  local_id,instance_type,ami
+
+locals {
+  # We've included this inline to create a complete example, but in practice
+  # this is more likely to be loaded from a file using the "file" function.
+  #csv_data = <<-CSV
+    #name,project
+    #foo123456788,vault-training-mamun
+    #foo265345289,vault-training-mamun
+  #CSV
+
+  csv_data = "${file("./test.csv")}"
+  instances = csvdecode(local.csv_data)
+}
+
+
+resource "google_storage_bucket" "static-site" {
+  for_each = { for inst in local.instances : inst.name => inst }
+  name = each.value.name
+  project = each.value.project
+
+
+}
+
+
+
+
