@@ -1,0 +1,40 @@
+
+download provider binaries from:
+   https://github.com/Scalr/terraform-provider-scalr/releases
+
+This did the trick (line 0 error: token not found)
+  export SCALR_HOSTNAME="foobarles.scalr.io"
+  export SCALR_TOKEN="foobar"
+
+
+data resource:
+   https://docs.scalr.com/en/latest/scalr-terraform-provider/data-sources/scalr_workspace.html
+
+help on how to use scalr provider:
+   https://docs.scalr.com/en/latest/scalr-terraform-provider/resources/scalr_workspace.html
+
+this doc takes you step by step:
+   https://docs.scalr.com/en/latest/cli.html
+
+to get token: on sclar GUI , click on yoru profile on top right
+
+I need to read this:
+   https://scalr.com/blog/get-stared-with-scalr-terraform-cli-on-aws/  **** (tutorial for setting up)??
+
+notes from provider version rc3 : no longer applicable
+
+format of the configs is very picky:
+
+error message is awlays the same: unprocessable entity
+
+  cause: 1. bad vcs code
+         2. wrong repo link
+         3. foobar workspace already existed. 
+
+correct:
+
+vcs_repo {
+      identifier = "foobarles/sandbox/mamun-sandbox/foobarrepo"
+      oauth_token_id = "vcs-srphlef0tva8j8o"
+      }
+
