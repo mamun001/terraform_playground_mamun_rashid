@@ -2,20 +2,23 @@
 
 
 # Collection of Mamun Rashid's Terraform Codes
+## This will eventually be organized by "type" and sorted by level of difficulty
 
 
-## FOLDERS
+## SUB-FOLDERS
 
-## aws ==> all terraform codes that deploy aws infrastructure
-## gcp ==> all terraform codes that deploy gcp infrastructure
-## vault ==> all terraform codes that use vault provider
+
+## aws ==> terraform codes for AWS
+## gcp ==> terraform codes for GCP
+## modules ==> all module codes
 ## scalr ==> all terraform codes that use scalr provider
+## vault ==> all terraform codes that use vault provider
+
+## How_to_use_tfvars_example ==> How to use tfvars (an examples)
 
 
 
 
-Note: modules folder will be shared between environments.
-   This is the set of the most re-usable codes
 
 
 
