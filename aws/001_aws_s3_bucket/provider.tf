@@ -1,3 +1,8 @@
+
+
+# If you are using AWS cred via shell variables, rename this file to something else
+
+
 provider "aws" {
   region  = var.aws_region
 
