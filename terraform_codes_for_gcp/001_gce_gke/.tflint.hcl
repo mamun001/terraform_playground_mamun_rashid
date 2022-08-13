@@ -1,3 +1,0 @@
-plugin "google" {
-    enabled = true
-}
