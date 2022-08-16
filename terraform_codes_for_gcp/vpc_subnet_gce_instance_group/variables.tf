@@ -15,4 +15,25 @@ locals {
   vpc = "foobar-vpc"
 }
 
+variable "default_rules" {
+  description = "default rule"
+  default = {
+    def_rule = {
+      action = "allow"
+      priority = "2147483647"
+      versioned_expr = "SRC_IPS_V1"
+      src_ip_ranges = ["*"]
+      description = "default rule"
+    }
+  }
+  type = map(object({
+    action = string 
+    priority = string 
+    versioned_expr = string 
+    src_ip_ranges = list(string) 
+    description = string 
+    })
+  )
+}
+
 
