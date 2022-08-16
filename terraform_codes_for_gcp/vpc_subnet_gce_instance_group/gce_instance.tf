@@ -1,4 +1,4 @@
-resource "google_compute_instance" "default" {
+resource "google_compute_instance" "backend_vm_1" {
   name         = local.instance_name
   machine_type = local.instance_type
   zone         = local.zone
