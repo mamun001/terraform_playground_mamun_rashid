@@ -13,6 +13,7 @@ locals {
   subnet = "foobar"
   cidr = "10.2.0.0/16"
   vpc = "foobar-vpc"
+  policy = "cloud-armor-test-policy"
 }
 
 variable "default_rules" {
