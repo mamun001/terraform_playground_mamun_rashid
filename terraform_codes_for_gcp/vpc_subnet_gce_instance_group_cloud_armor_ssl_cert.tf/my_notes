@@ -1,0 +1,13 @@
+
+
+1. this one is good for LB: and more
+
+   https://gmusumeci.medium.com/getting-started-with-terraform-and-google-cloud-platform-gcp-deploying-vms-in-a-private-only-f9ab61fa7d15
+
+2. LB needs url_map
+
+3. url_map needs backend_service
+
+4. backend_service needs health_check
+
+

@@ -16,6 +16,8 @@ locals {
   policy = "cloud-armor-test-policy"
   https-lb = "foobar-https-lb"
   firewall_network = "foobar-firewall-network"
+  health_check = "foobar-health-check"
+  backend_service = "foobar-backend-service"
 }
 
 variable "default_rules" {
