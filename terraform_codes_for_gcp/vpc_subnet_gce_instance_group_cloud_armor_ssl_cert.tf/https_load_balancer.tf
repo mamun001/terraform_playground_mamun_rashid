@@ -5,12 +5,12 @@ module "https_lb_1" {
     project = local.project 
     firewall_networks = [local.firewall_network]
     create_url_map = false 
-    url_map = google_compute_url_map.foobar-lb-url-map.selflink 
+    #url_map = google_compute_url_map.foobar-lb-url-map.selflink 
     use_ssl_certificates = true 
     ssl = true 
     random_certificate_suffix = true 
     https_redirect = true 
-    ssl_certificates = google_compute_managed_ssl_certificate.foobar.self_link
+    ssl_certificates = ["${google_compute_managed_ssl_certificate.foobar.self_link}"]
     backends = {
         default = {
             description = "Default Backend for this LB"

@@ -14,6 +14,8 @@ locals {
   cidr = "10.2.0.0/16"
   vpc = "foobar-vpc"
   policy = "cloud-armor-test-policy"
+  https-lb = "foobar-https-lb"
+  firewall_network = "foobar-firewall-network"
 }
 
 variable "default_rules" {
