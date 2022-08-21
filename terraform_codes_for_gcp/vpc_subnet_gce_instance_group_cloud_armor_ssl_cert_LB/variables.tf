@@ -21,6 +21,8 @@ locals {
   url_map = "foobar-url-map"
 }
 
+
+#  "default here has nothing to do with "default" rule in cloud armor policy
 variable "default_rules" {
   description = "default rule"
   default = {
@@ -49,7 +51,7 @@ variable "owasp_rule" {
     rule_sqli = {
       action = "deny(403)"
       priority = "1001"
-      expression = "evaluatePreconfiguredExpr('sqli-stable', ['owasp-crs-v030001-id942251-sqli','owasp-crs-v030001-id942421-sqli'])"
+      expression = "evaluatePreconfiguredExpr('sqli-stable', ['owasp-crs-v030001-id942251-sqli','owasp-crs-v030001-id942420-sqli','owasp-crs-v030001-id942421-sqli'])"
     }
     rule_lfi = {
       action = "deny(403)"
