@@ -18,6 +18,7 @@ locals {
   firewall_network = "foobar-firewall-network"
   health_check = "foobar-health-check"
   backend_service = "foobar-backend-service"
+  url_map = "foobar-url-map"
 }
 
 variable "default_rules" {
