@@ -15,4 +15,16 @@ resource "google_compute_security_policy" "cloud_armor_security_policy_1" {
             description = rule.value.description 
         }
     }
+    dynamic "rule" {
+        for_each = var.owasp_rule
+        content {
+            action = rule.value.action 
+            priority = rule.value.priority 
+            match {
+              expr {
+                expression = rule.value.expression
+                }
+            }
+        }
+    }
 }

@@ -48,7 +48,7 @@ variable "owasp_rule" {
   default = {
     rule_sqli = {
       action = "deny(403)"
-      priority = "2147483647"
+      priority = "1001"
       expression = "evaluatePreconfiguredExpr('sqli-stable', ['owasp-crs-v030001-id942251-sqli','owasp-crs-v030001-id942421-sqli'])"
     }
     rule_lfi = {
