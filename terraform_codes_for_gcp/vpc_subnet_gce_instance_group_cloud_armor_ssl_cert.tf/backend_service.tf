@@ -10,7 +10,8 @@ resource "google_compute_backend_service" "foobar" {
   health_checks = [google_compute_health_check.foobar.self_link]  
   backend {
     group = google_compute_instance_group.foobar.self_link
-    balancing_mode = "RATE"
+    #balancing_mode = "RATE"
+    balancing_mode = "UTILIZATION"
     max_rate_per_instance = 100
   }
 }

@@ -15,7 +15,7 @@ locals {
   vpc = "foobar-vpc"
   policy = "cloud-armor-test-policy"
   https-lb = "foobar-https-lb"
-  firewall_network = "foobar-firewall-network"
+  firewall_network = "foobar-vpc"
   health_check = "foobar-health-check"
   backend_service = "foobar-backend-service"
   url_map = "foobar-url-map"

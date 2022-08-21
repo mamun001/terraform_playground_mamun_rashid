@@ -1,16 +1,16 @@
-module "https_lb_1" {
+module "foobar-hhtps-lb" {
     source = "GoogleCloudPlatform/lb-http/google"
     version = "~> 6.1"
     name = local.https-lb 
     project = local.project 
     firewall_networks = [local.firewall_network]
     create_url_map = false 
-    #url_map = google_compute_url_map.foobar-lb-url-map.selflink 
+    url_map = google_compute_url_map.foobar.self_link
     use_ssl_certificates = true 
     ssl = true 
     random_certificate_suffix = true 
     https_redirect = true 
-    ssl_certificates = ["${google_compute_managed_ssl_certificate.foobar.self_link}"]
+    ssl_certificates = [google_compute_managed_ssl_certificate.foobar.self_link]
     backends = {
         default = {
             description = "Default Backend for this LB"
@@ -43,13 +43,13 @@ module "https_lb_1" {
             # instance_group backend
             groups = [
                 {
-                  group = google_compute_instance_group.foobar_instance_group.id
+                  group = google_compute_instance_group.foobar.id
                   balancing_mode = "UTILIZATION"
                   capacity_scaler = null 
                   description = null 
                   max_connections = null 
                   max_connections_per_instance = null 
-                  max_connections_per_endpoint = 10
+                  max_connections_per_endpoint = null
                   max_rate = 10
                   max_rate_per_instance = null 
                   max_rate_per_endpoint = null 
