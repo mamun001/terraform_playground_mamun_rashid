@@ -23,6 +23,20 @@
 #
 
 ## How_to_use_tfvars_example ==> How to use tfvars (an examples)
+#
+
+#
+
+
+##     How To Use This Repo
+#
+
+### Go into each directory, find the sub-dir that matches your interest and look at the code there. 
+### In most cases, you can use the code to deploy infrastructure as long as you change values in variables.tf and provider.tf files
+#
+
+#
+
 
 
 
