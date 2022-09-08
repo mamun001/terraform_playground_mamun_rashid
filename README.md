@@ -20,11 +20,7 @@
 ## modules ==> all module codes
 ## scalr ==> all terraform codes that use scalr provider
 ## vault ==> all terraform codes that use vault provider
-#
-
-## How_to_use_tfvars_example ==> How to use tfvars (an examples)
-#
-
+## terraform_code_examples_for_various_patterns ==> you will find code examples of patterns that repeat (e.g. for-each loop, dealing with maps etc.)
 #
 
 
