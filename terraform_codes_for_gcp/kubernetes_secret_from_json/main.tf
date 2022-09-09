@@ -3,6 +3,8 @@
 # This code will will work if the data was correct
 # But the real data has been replaced with fake data
 
+# This will read the data in service_account.json and use that to create a Kubernetes Secret
+
 resource "kubernetes_secret" "some-secret" {
 
       metadata {
@@ -14,6 +16,6 @@ resource "kubernetes_secret" "some-secret" {
         }
       }
       data = {
-        "sa.json" = file("${path.cwd}/sa.json")
+        "service_account.json" = file("${path.cwd}/service_account.json")
       }
 }
