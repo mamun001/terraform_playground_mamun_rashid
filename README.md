@@ -23,6 +23,8 @@
 ## terraform_code_examples_for_various_patterns ==> you will find code examples of patterns that repeat (e.g. for-each loop, dealing with maps etc.)
 #
 
+### You will some repeats of the codes between folders where the code set applies to both categories
+
 
 ##     How To Use This Repo
 #

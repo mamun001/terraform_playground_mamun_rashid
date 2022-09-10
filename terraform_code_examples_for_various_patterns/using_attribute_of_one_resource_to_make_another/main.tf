@@ -12,6 +12,7 @@ resource "google_service_account" "foobar_service_account" {
 }
 
 
+
 # iam_member
 # google_service_account has an attribute called "email"
 # We use that to create another resource iam_member
