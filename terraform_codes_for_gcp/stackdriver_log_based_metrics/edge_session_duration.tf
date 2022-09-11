@@ -1,5 +1,18 @@
-resource "google_logging_metric" "gw_upload_latency" {
-    filter           = <<-EOT
+
+
+#  Create Stackdriver Log-based metric
+#    edge session duration of a Kubernetes Application
+
+
+resource "google_logging_metric" "edge_session_duration" {
+  bucket_options {
+        exponential_buckets {
+            growth_factor      = 2
+            num_finite_buckets = 64
+            scale              = 0.01
+        }
+  }
+  filter           = <<-EOT
         resource.type="${local.resource_type}"
         resource.labels.project_id="${local.project}"
         resource.labels.location="${local.zone}"
@@ -7,32 +20,17 @@ resource "google_logging_metric" "gw_upload_latency" {
         resource.labels.namespace_name="${local.namespace}"
         labels.k8s-pod/app="${local.app}"
         labels.k8s-pod/cluster="${local.app}"
-        "mbps"
+        "edge metric"
     EOT
-    label_extractors = {
+  label_extractors = {
         "channel_id"    = "EXTRACT(jsonPayload.data.channel)"
         "gateway_id"    = "EXTRACT(jsonPayload.data.gateway)"
         "location_type" = "EXTRACT(jsonPayload.data.locationType)"
         "org_id"        = "EXTRACT(jsonPayload.data.orgId)"
-    }
-    #name             = "test_gw_upload_latency"
-    name             = "${local.env_prefix}gw_upload_latency"
-    project          = local.project
-    value_extractor  = "EXTRACT(jsonPayload.data.gateway)"
-
-    bucket_options {
-
-        linear_buckets {
-            num_finite_buckets = 200
-            offset             = 0
-            width              = 0
-        }
-    }
-
-    metric_descriptor {
+  }
+  metric_descriptor {
         metric_kind = "DELTA"
         value_type  = "DISTRIBUTION"
-
         labels {
             key        = "channel_id"
             value_type = "STRING"
@@ -50,7 +48,9 @@ resource "google_logging_metric" "gw_upload_latency" {
             value_type = "STRING"
         }
     }
-
-    timeouts {}
+  #name               = "test_edge_session_duration"
+  name             = "${local.env_prefix}edge_session_duration"
+  project          = local.project
+  value_extractor  = "EXTRACT(jsonPayload.data.sesssionDuration)"
+  timeouts {}
 }
-

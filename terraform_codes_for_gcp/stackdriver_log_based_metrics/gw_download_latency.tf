@@ -1,3 +1,8 @@
+
+
+#  Create Stackdriver Log-based metric
+#    download latency of a Kubernetes Application
+
 resource "google_logging_metric" "gw_download_latency" { 
   bucket_options {
         linear_buckets {
