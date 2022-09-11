@@ -17,6 +17,6 @@
 ### WHAT IS NOT INCLUDED:
        provider.tf
 
-### Once deployed , you go to http://public_ip_of_loadbalancer:90 and boom ! You see the web page
+### Once deployed , you go to http://public_ip_of_loadbalancer:80 and boom ! You see the web page
 
 

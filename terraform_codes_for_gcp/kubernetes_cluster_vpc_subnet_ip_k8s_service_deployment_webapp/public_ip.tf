@@ -1,5 +1,6 @@
 
-# Mamun's notes
+#
+# 
 # We will need an public IP for the load balancer where the k8s app  will be reachable
 
 

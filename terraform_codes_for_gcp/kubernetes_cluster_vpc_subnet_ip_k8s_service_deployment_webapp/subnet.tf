@@ -1,4 +1,6 @@
 
+
+# Create a subnet where the Kubernetes cluster will be deployed
 resource "google_compute_subnetwork" "gke_subnet" {
   name                     = local.subnet_name
   project                  = local.project

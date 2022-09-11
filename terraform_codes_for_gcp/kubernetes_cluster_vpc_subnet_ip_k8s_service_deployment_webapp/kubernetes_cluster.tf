@@ -1,3 +1,6 @@
+
+
+# This creates a Kubernetes Cluster in the VPC that we create via a different .tf file in this folder
 resource "google_container_cluster" "gke_cluster" {
   name               = local.cluster_name
   project            = local.project

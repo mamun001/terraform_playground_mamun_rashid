@@ -5,16 +5,14 @@
 ### That set of codes of worked so beautifully, there was no need to edit anything
 #
 
-
+#
 # explanation is provided here
 #   https://stackoverflow.com/questions/64134253/how-to-get-default-gcp-project-and-region-with-terraform
 #  get what is the provider's default project and region? Something analogous to aws_region in AWS (like in this question), but for Google Compute Engine (GCE/GCP)
-
 data "google_client_config" "provider" {}
 
 
 #  These set grabs bunch of information we need FROM the cluster to build our k8s SERVICE and k8s Deployment
-
 provider "kubernetes" {
   version = "1.10.0"
   host    = google_container_cluster.gke_cluster.endpoint
@@ -34,7 +32,6 @@ provider "kubernetes" {
 #  Note that to build this SERVICE , the only dependency is the IP of the LB. That's it
 #
 # This uses the Kubernetes provider!
-
 resource "kubernetes_service" "app" {
   metadata {
     name = "app"
@@ -62,7 +59,6 @@ resource "kubernetes_service" "app" {
 #  __________________ k8s deployment _________________________
 # This uses the Kubernetes provider!
 # USE THIS images to create the deployment "escoto/kotlinresthello"
-
 resource "kubernetes_deployment" "app" {
   metadata {
     name = "app"
