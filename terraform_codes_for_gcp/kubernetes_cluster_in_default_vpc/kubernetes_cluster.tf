@@ -1,3 +1,8 @@
+
+
+# Create a Kubernetes Cluster 
+#  Parameters are in variables.tf
+
 resource "google_container_cluster" "foobar" {
   name               = local.name
   location           = local.location

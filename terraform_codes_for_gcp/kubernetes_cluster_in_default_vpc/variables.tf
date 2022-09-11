@@ -1,7 +1,9 @@
 
 
+# This code set assumes kubernetes cluster would be deployed in "default" VPC
+
 locals {
-  name = "foobar2"
+  name = "foobar"
   location = "us-central1-a"
   initial_node_count = 2
   username = "foo"
