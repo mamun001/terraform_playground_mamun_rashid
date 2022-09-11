@@ -5,6 +5,10 @@
 
 ### All tested and works beautifully
 
+
+### Example Use Case:
+####  When you wan to deploy a containered app on Kubernetes Cluster of your own.
+
 ### Steps: Order in which the resources should be created
               TODO: add depends_on so that they are executed in sequence
 ####  1. VPC

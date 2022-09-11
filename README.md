@@ -2,8 +2,8 @@
 
 
 # Collection of Mamun Rashid's Terraform Codes
-## This will eventually be organized by "type" and sorted by level of difficulty
-## But right now, it is only divided into folder by cloud (aws/gcp) or provider (scalr/vault)
+##
+##  They are divided into folder by cloud (aws/gcp) or provider (scalr/vault) AND a special folder where we have various code patterns
 ##
 ##   By Mamun Rashid
 ###    Connect with me on Linkedin: https://www.linkedin.com/in/mamunrashid/
@@ -11,7 +11,7 @@
 
 #
 
-
+##
 ## SUB-FOLDERS
 #
 
