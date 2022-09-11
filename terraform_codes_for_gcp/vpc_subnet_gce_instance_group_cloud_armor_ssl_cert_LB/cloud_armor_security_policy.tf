@@ -1,3 +1,10 @@
+
+
+#  Code Modified from:  https://brk0018.medium.com/implement-cloud-armor-security-policy-s-using-terraform-1794792e2842
+#  Creates cloud armor policy with OWASP Rules
+#  OWASP Rules are defined in variables.tf file
+
+
 resource "google_compute_security_policy" "cloud_armor_security_policy_1" {
     project = local.project 
     name = local.policy
