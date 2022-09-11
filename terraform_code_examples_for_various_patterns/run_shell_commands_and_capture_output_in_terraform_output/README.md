@@ -19,14 +19,14 @@
 #
 
 
-##### File named run_a_shell_command_and_report_back.tf: you can see we can run pretty much any command on the local machine and capture the output
-###     NOTE: The run_a_shell_command_and_report_back.tf file has NO DEPENDENCY on the set_environment_variables_and_report_back.tf file in directory. 
-###     That is just another exmaple for setting variables on local machine
+### File named run_a_shell_command_and_report_back.tf: you can see we can run pretty much any command on the local machine and capture the output
+#####     NOTE: The run_a_shell_command_and_report_back.tf file has NO DEPENDENCY on the set_environment_variables_and_report_back.tf file in directory. 
+#####     That is just another exmaple for setting variables on local machine
 #
 
-##### File named set_environment_variables_and_report_back.tfs sets variables and captures them in terraform state and reports back in the form of terraform output
-###     Code in this file DYNAMICALLY created BASH script on the fly. This means , we do not have carry any script files along with it.
-###     NOTE: This does not have to be env variables. This can be ANY bash script!
+### File named set_environment_variables_and_report_back.tfs sets variables and captures them in terraform state and reports back in the form of terraform output
+#####     Code in this file DYNAMICALLY created BASH script on the fly. This means , we do not have carry any script files along with it.
+#####     NOTE: This does not have to be env variables. This can be ANY bash script!
 #
 
 #
