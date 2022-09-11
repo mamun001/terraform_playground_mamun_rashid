@@ -4,10 +4,11 @@
 ### Delivers some magic
 #
 
-## WHY WOULD YOU NEED THIS ??
-###  What if you want to run a script and use the output from those to create other cloud resources via Terraform ? Now you can do this!
+##  USE CASES:
 ###
-###  Also, when you run provisioners (basically like user scripts for ec2) , this module will come in handy when you need to run scripts of the remote host.
+###  1. If you are running terraform code on a temporary container/Virtual Machine as part of a CICD pipeline and you need values from OS inside the terraform code
+###  2. What if you want to run a script and use the output from those to create other cloud resources via Terraform ? Now you can do this!
+###  3. when you run provisioners (basically like user scripts for ec2) , this module will come in handy when you need to run scripts of the remote host.
 ###
 #
 
