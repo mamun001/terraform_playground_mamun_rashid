@@ -1,0 +1,8 @@
+
+
+google_logging_metric.channel_mbps_linear
+google_logging_metric.edge_session_duration
+google_logging_metric.gw_download_latency
+google_logging_metric.gw_roundtrip
+google_logging_metric.gw_upload_latency
+google_logging_metric.upload_mbps_linear
