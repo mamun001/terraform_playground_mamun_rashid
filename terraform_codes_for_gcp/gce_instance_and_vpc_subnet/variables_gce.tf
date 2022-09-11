@@ -9,6 +9,9 @@ locals {
   instance_type = "n2d-standard-2"
   image = "debian-cloud/debian-10"
   instance_name = "deleteme2"
+  vpc = "foobar-vpc"
+  subnet = "foobar-subnet"
+  cidr = "192.168.0.0/16"
 }
 
 

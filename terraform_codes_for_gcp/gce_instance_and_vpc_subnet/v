@@ -1,0 +1,22 @@
+
+# n2-standard quota is 0. n2d-standard is available
+locals {
+  project = "mrashid-cloud-armor-playground"
+  credentials_file = "/Users/mamunrashid/my.json"
+  region = "us-central1"
+  location = "us-central1-a"
+  zone = "us-central1-f"
+  create = "30m"
+  update = "40m"
+  instance_type = "n2d-standard-2"
+  clustername = "foobarcluster"
+  subnet = "foobar"
+  cidr = "10.2.0.0/16"
+  vpc = "foobar-vpc"
+  disable-legacy-endpoints = "true"
+  oauth_scopes = [
+      "https://www.googleapis.com/auth/logging.write",
+      "https://www.googleapis.com/auth/monitoring",
+    ]
+}
+

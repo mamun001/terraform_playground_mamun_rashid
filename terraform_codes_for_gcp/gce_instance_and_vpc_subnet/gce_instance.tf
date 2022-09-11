@@ -12,7 +12,9 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = "default"
+    #network = "default"
+    network = local.vpc
+    subnetwork = local.subnet
 
     access_config {
       // Ephemeral IP
