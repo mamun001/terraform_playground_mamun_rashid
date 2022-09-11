@@ -12,6 +12,7 @@
        d. a kubernetes secret from that key.
 
 
+#### This code set has been tested with Terraform 0.13.5
 
 #####  Example Input to this module:
 #####    Explanation:

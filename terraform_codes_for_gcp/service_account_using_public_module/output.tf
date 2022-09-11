@@ -1,4 +1,6 @@
 
+# output details about accounts created
+
 output "service_account_ids" {
   value = module.service_accounts_plus.account_ids
 }
