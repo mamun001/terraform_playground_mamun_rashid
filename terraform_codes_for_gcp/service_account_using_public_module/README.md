@@ -23,7 +23,6 @@
 #####           2. key-value pairs of project-role (a role to be given to this SA in that project)
 #####
 #####          X N Service Accounts (as a list of maps)
-
 {
   "inputs": [
         {
