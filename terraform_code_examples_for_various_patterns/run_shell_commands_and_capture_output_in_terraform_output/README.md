@@ -2,7 +2,7 @@
 ## USING SHELL MODULE BY Matt Pakrula TO RUN BASH SCRIPT and CAPTURE OUTPUT
 ##
 ### This code Matt Paksula's terraform-shell-resource module ( https://github.com/matti/terraform-shell-resource)
-### Delivers some magic
+###   and delivers some magic!
 #
 
 ##  USE CASES:
@@ -13,31 +13,23 @@
 ###
 #
 
-
-
-### set_environment_variables_and_report_back.tfsSets variables and captures them in terraform state and reports back in the form of terraform output
-### First of all it is a DYNAMICALLY created BASH script! 
-### NOTE: This does not have to be env variables. This can be ANY bash script!
 #
-
-
-##### This code is like magic
-##### This uses a publicly available terraform module from Matti Paksula
-#
-##### Using this module , you can pretty much run any shell command on the machine that runs terraform and capture the output in terraform output
+##### Using Matt's module , you can pretty much run any shell command on the machine that runs terraform and capture the output in terraform output
 ##### See various examples below
 #
 
 
-##### From these examples in run_a_shell_command_and_report_back.tf, you can see we can run pretty much any command on the local machine and capture the output
+##### File named run_a_shell_command_and_report_back.tf: you can see we can run pretty much any command on the local machine and capture the output
+###     NOTE: The run_a_shell_command_and_report_back.tf file has NO DEPENDENCY on the set_environment_variables_and_report_back.tf file in directory. 
+###     That is just another exmaple for setting variables on local machine
 #
 
-
-###  NOTE: The run_a_shell_command_and_report_back.tf file has NO DEPENDENCY on the set_environment_variables_and_report_back.tf file in directory. 
-###        That is just another exmaple for setting variables on local machine
+##### File named set_environment_variables_and_report_back.tfs sets variables and captures them in terraform state and reports back in the form of terraform output
+###     Code in this file DYNAMICALLY created BASH script on the fly. This means , we do not have carry any script files along with it.
+###     NOTE: This does not have to be env variables. This can be ANY bash script!
 #
 
-
+#
 
 
 ### Here is what you should get if you ran "terraform state list" on the local host after "terraform apply"
