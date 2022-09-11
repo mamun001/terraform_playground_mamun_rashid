@@ -1,0 +1,3 @@
+name,machine_type,zone,image,vpc,subnet
+foobar1,n2d-standard-2,us-central1-f,debian-cloud/debian-10,foobar-vpc,foobar-subnet
+foobar2,n2d-standard-2,us-central1-f,debian-cloud/debian-10,foobar-vpc,foobar-subnet
