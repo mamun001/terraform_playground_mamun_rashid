@@ -1,5 +1,6 @@
 
-# USING SHELL MODULE BY Matt Pakrula TO RUN BASH SCRIPT and CAPTURE OUTPUT
+## USING SHELL MODULE BY Matt Pakrula TO RUN BASH SCRIPT and CAPTURE OUTPUT
+##
 ### This code Matt Paksula's terraform-shell-resource module ( https://github.com/matti/terraform-shell-resource)
 ### Delivers some magic
 #
