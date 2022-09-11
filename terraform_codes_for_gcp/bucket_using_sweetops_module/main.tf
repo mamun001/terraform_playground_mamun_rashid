@@ -4,5 +4,5 @@ module "awesome_bucket" {
   stage       = "development"
   namespace   = "sweetops"
   location    = "us-central1"
-  project     = "sre-sandbox-243618"
+  project     = "foobar-project-123456"
 }
