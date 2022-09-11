@@ -1,3 +1,7 @@
+
+
+# We need a GCE instance to make a instance group
+
 resource "google_compute_instance" "backend_vm_1" {
   name         = local.instance_name
   machine_type = local.instance_type

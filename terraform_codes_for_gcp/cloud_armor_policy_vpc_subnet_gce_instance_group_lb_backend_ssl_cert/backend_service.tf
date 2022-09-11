@@ -1,4 +1,5 @@
 
+
 # defines a group of virtual machines that will serve traffic for load balancing
 
 resource "google_compute_backend_service" "foobar" {

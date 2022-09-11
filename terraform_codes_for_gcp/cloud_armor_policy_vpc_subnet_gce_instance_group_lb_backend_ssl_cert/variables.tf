@@ -1,5 +1,6 @@
 
-# n2-standard quota is 0. n2d-standard is available
+
+#  Naming things
 locals {
   project = "mrashid-cloud-armor-playground"
   credentials_file = "/Users/mamunrashid/my.json"
@@ -20,7 +21,7 @@ locals {
   url_map = "foobar-url-map"
 }
 
-
+# Rules (including OWASP) for the Cloud Armor Policy
 #  "default here has nothing to do with "default" rule in cloud armor policy
 variable "default_rules" {
   description = "default rule"

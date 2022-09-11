@@ -1,4 +1,7 @@
 
+
+# We need a healtheck to create a LB
+
 resource "google_compute_health_check" "foobar" {
   name = local.health_check
   timeout_sec = 1

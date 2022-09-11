@@ -1,4 +1,6 @@
 
+# We need an instance group for backend service
+
 resource "google_compute_instance_group" "foobar" {
     name = local.instance_group_name
     project = local.project 
@@ -9,6 +11,6 @@ resource "google_compute_instance_group" "foobar" {
         name = "http"
         port = "8080"
     }
-    }
+}
     
     

@@ -1,3 +1,10 @@
+
+
+# We need a LB to tie to the cloud armor policy
+
+# We use a publicly available module for this.
+
+
 module "foobar-https-lb" {
     source = "GoogleCloudPlatform/lb-http/google"
     version = "~> 6.1"
