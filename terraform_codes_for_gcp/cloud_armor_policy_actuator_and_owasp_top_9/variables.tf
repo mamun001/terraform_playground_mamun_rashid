@@ -1,12 +1,21 @@
 
+
+# Only modify the locals section to fit your enviroment
+# You can leave "variables section untouched
+
 locals {
-  project = "mrashid-cloud-armor-playground"
+  project = "foobar-project"
   credentials_file = "/Users/mamunrashid/my.json"
   region = "us-central1"
   location = "us-central1-a"
   zone = "us-central1-f"
   ip_white_list = ["9.9.9.0/24"]
 }
+
+
+
+#  Leave these untouched
+#  These define all the rules that you need to implement OWASP rules in Cloud Armor
 
 variable "owasp_rules" {
   description = "OWASP Rules"
