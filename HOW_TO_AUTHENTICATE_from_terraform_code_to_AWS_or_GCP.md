@@ -14,5 +14,17 @@
     ### local machine will have the following it its bash profile. That will link to GCP project.
            export GOOGLE_APPLICATION_CREDENTIALS={{path}}
 
+    ### OR, have provider.tf file like the following
+
+#### provider "google" {
+####   credentials = file("./foo.json")
+####   project     = "project-id"
+#### region      = "us-central1-a"
+#### }
+
+
+
+
+
 
 
